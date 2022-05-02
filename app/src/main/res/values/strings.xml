@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mental Planner</string>
+    <string name="what_time_do_you_wake_up">What Time Do You Wake Up?</string>
+    <string name="what_time_do_you_go_to_bed">What Time Do You Go To Bed?</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="next">Next</string>
+    <string name="select_your_goals">Select Your Goals</string>
+    <string name="finish">Finish</string>
+    <string name="live_healthier">Live Healthier</string>
+    <string name="be_more_focused">Be More Focused</string>
+    <string name="sleep_better">Sleep Better</string>
+    <string name="relieve_pressure">Relieve Pressure</string>
+    <string name="better_relationship">Better Relationship</string>
+    <string name="try_new_things">Try New Things</string>
+</resources>

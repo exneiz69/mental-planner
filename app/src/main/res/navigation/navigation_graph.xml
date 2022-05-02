@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/trackerFragment">
+
+    <fragment
+        android:id="@+id/sleepingPatternFragment"
+        android:name="com.example.mentalplanner.fragments.SleepingPatternFragment"
+        android:label="SleepingPatternFragment"
+        tools:layout="@layout/fragment_sleeping_pattern" >
+        <action
+            android:id="@+id/action_sleepingPatternFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.example.mentalplanner.fragments.GoalsFragment"
+        android:label="GoalsFragment"
+        tools:layout="@layout/fragment_goals" >
+        <action
+            android:id="@+id/action_goalsFragment_to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackerFragment"
+        android:name="com.example.mentalplanner.fragments.TrackerFragment"
+        android:label="TrackerFragment"
+        tools:layout="@layout/fragment_tracker" />
+</navigation>
