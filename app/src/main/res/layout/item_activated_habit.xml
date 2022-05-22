@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="habit"
+            type="com.example.mentalplanner.database.Habit" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/habitIconImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/habitNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{habit.name}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/habitIconImageView"
+            app:layout_constraintEnd_toStartOf="@+id/changeButton"
+            app:layout_constraintStart_toEndOf="@+id/habitIconImageView"
+            app:layout_constraintTop_toTopOf="@+id/habitIconImageView"
+            tools:text="Run" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/delete_short"
+            app:layout_constraintBottom_toBottomOf="@+id/habitIconImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/habitIconImageView" />
+
+        <Button
+            android:id="@+id/changeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/change"
+            app:layout_constraintBottom_toBottomOf="@+id/habitIconImageView"
+            app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+            app:layout_constraintTop_toTopOf="@+id/habitIconImageView" />
+
+        <CheckBox
+            android:id="@+id/completedCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completed"
+            app:layout_constraintStart_toStartOf="@+id/habitIconImageView"
+            app:layout_constraintTop_toBottomOf="@+id/habitIconImageView" />
+
+        <Button
+            android:id="@+id/timerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/timer"
+            app:layout_constraintBottom_toBottomOf="@+id/completedCheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/completedCheckBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

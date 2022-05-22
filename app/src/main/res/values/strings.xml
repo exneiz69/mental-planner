@@ -1,16 +1,60 @@
 <resources>
+    <string name="main_preferences">com.example.mentalplanner.MainPreferences</string>
+    <string name="wake_up_hours_key">wakeUpHours</string>
+    <string name="wake_up_minutes_key">wakeUpMinutes</string>
+    <string name="go_bed_hours_key">goBedHours</string>
+    <string name="go_bed_minutes_key">goBedMinutes</string>
+    <string name="selected_initial_habit_key">selectedInitialHabit</string>
+    <string-array name="habit_time_period">
+        <item>Anytime</item>
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+    </string-array>
+    <string-array name="habit_icon">
+        <item>Custom</item>
+        <item>Essential</item>
+        <item>EatDrinkHealthily</item>
+        <item>KeepActive</item>
+        <item>EaseStress</item>
+        <item>LeisureMoments</item>
+    </string-array>
     <string name="app_name">Mental Planner</string>
     <string name="what_time_do_you_wake_up">What Time Do You Wake Up?</string>
     <string name="what_time_do_you_go_to_bed">What Time Do You Go To Bed?</string>
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
     <string name="next">Next</string>
-    <string name="select_your_goals">Select Your Goals</string>
+    <string name="select_your_goals">Select Your Goal</string>
     <string name="finish">Finish</string>
-    <string name="live_healthier">Live Healthier</string>
-    <string name="be_more_focused">Be More Focused</string>
-    <string name="sleep_better">Sleep Better</string>
-    <string name="relieve_pressure">Relieve Pressure</string>
-    <string name="better_relationship">Better Relationship</string>
-    <string name="try_new_things">Try New Things</string>
+    <string name="essential">Essential</string>
+    <string name="eat_drink_healthily"><![CDATA[Eat & Drink Healthily]]></string>
+    <string name="keep_active">Keep Active</string>
+    <string name="ease_stress">Ease Stress</string>
+    <string name="leisure_moments">Leisure Moments</string>
+    <string name="change">Change</string>
+    <string name="habit_name">Habit name</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="delete_short">X</string>
+    <string name="repeat">Repeat</string>
+    <string name="add_habit">Add habit</string>
+    <string name="create_own_habit">Create own habit</string>
+    <string name="completed">Completed</string>
+    <string name="timer">Timer</string>
+    <string name="icon">Icon</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="do_it_at">Do it at</string>
+    <string name="back">Back</string>
+    <string name="start">Start</string>
+    <string name="seconds">Seconds</string>
+    <string name="reset">Reset</string>
+    <string name="stop">Stop</string>
+    <string name="today">TODAY</string>
 </resources>

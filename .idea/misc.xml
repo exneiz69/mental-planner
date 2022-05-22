@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/activity_main.xml" value="0.32472826086956524" />
-        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_goals.xml" value="0.32472826086956524" />
-        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_sleeping_pattern.xml" value="0.32472826086956524" />
+        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_goals.xml" value="0.25" />
+        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_habit_creation.xml" value="0.25" />
+        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_sleeping_pattern.xml" value="0.22" />
+        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_timer.xml" value="0.3180846515604959" />
         <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/fragment_tracker.xml" value="0.32518115942028986" />
+        <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/item_activated_habit.xml" value="0.3180846515604959" />
         <entry key="..\:/Univerzita/VAMZ/AndroidStudioProjects/MentalPlanner/app/src/main/res/layout/sleeping_pattern_fragment.xml" value="0.32472826086956524" />
       </map>
     </option>

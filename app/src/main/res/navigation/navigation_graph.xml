@@ -9,7 +9,7 @@
         android:id="@+id/sleepingPatternFragment"
         android:name="com.example.mentalplanner.fragments.SleepingPatternFragment"
         android:label="SleepingPatternFragment"
-        tools:layout="@layout/fragment_sleeping_pattern" >
+        tools:layout="@layout/fragment_sleeping_pattern">
         <action
             android:id="@+id/action_sleepingPatternFragment_to_goalsFragment"
             app:destination="@id/goalsFragment" />
@@ -18,14 +18,57 @@
         android:id="@+id/goalsFragment"
         android:name="com.example.mentalplanner.fragments.GoalsFragment"
         android:label="GoalsFragment"
-        tools:layout="@layout/fragment_goals" >
+        tools:layout="@layout/fragment_goals">
         <action
             android:id="@+id/action_goalsFragment_to_trackerFragment"
-            app:destination="@id/trackerFragment" />
+            app:destination="@id/trackerFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_goalsFragment_to_habitCreationFragment"
+            app:destination="@id/habitCreationFragment" />
     </fragment>
     <fragment
         android:id="@+id/trackerFragment"
         android:name="com.example.mentalplanner.fragments.TrackerFragment"
         android:label="TrackerFragment"
-        tools:layout="@layout/fragment_tracker" />
+        tools:layout="@layout/fragment_tracker">
+        <action
+            android:id="@+id/action_trackerFragment_to_habitCreationFragment"
+            app:destination="@id/habitCreationFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitCreationFragment"
+        android:name="com.example.mentalplanner.fragments.HabitCreationFragment"
+        android:label="HabitCreationFragment"
+        tools:layout="@layout/fragment_habit_creation">
+        <action
+            android:id="@+id/action_habitCreationFragment_to_trackerFragment"
+            app:destination="@id/trackerFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="habitID"
+            app:argType="long" />
+        <argument
+            android:name="habitCreation"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.mentalplanner.fragments.TimerFragment"
+        android:label="TimerFragment"
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_trackerFragment"
+            app:destination="@id/trackerFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

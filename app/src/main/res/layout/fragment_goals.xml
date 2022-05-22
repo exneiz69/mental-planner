@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="goalsViewModel"
+            type="com.example.mentalplanner.viewModels.GoalsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,92 +16,117 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="32dp"
             android:text="@string/select_your_goals"
             android:textAlignment="center"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/finishButton"
+            android:id="@+id/essentialButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/essential"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <Button
+            android:id="@+id/eatDrinkHealthilyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/eat_drink_healthily"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/essentialButton" />
+
+        <Button
+            android:id="@+id/keepActiveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/keep_active"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/eatDrinkHealthilyButton" />
+
+        <Button
+            android:id="@+id/easeStressButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ease_stress"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/keepActiveButton" />
+
+        <Button
+            android:id="@+id/leisureMomentsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/leisure_moments"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/easeStressButton" />
+
+        <Button
+            android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="608dp"
-            android:text="@string/finish"
+            android:layout_marginBottom="32dp"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/liveHealthierButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="48dp"
-            android:text="@string/live_healthier"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <ScrollView
+            android:id="@+id/habitsScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/nextButton"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/leisureMomentsButton">
 
-        <Button
-            android:id="@+id/tryNewThingsButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:text="@string/try_new_things"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/liveHealthierButton" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/habitsChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:chipSpacingHorizontal="8dp"
+                app:singleLine="false"
+                app:singleSelection="true">
 
-        <Button
-            android:id="@+id/betterRelationshipButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:text="@string/better_relationship"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tryNewThingsButton" />
+            </com.google.android.material.chip.ChipGroup>
+        </ScrollView>
 
-        <Button
-            android:id="@+id/relievePressureButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:text="@string/relieve_pressure"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/betterRelationshipButton" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
 
-        <Button
-            android:id="@+id/beMoreFocusedButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:text="@string/be_more_focused"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relievePressureButton" />
-
-        <Button
-            android:id="@+id/sleepBetterButton"
-            android:layout_width="220dp"
-            android:layout_height="48dp"
-            android:text="@string/sleep_better"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/beMoreFocusedButton" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

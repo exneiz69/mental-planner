@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="sleepingPatternViewModel"
+            type="com.example.mentalplanner.viewModels.SleepingPatternViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +17,7 @@
             android:id="@+id/wakeUpTextView"
             android:layout_width="242dp"
             android:layout_height="64dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="32dp"
             android:text="@string/what_time_do_you_wake_up"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -28,20 +30,20 @@
             android:id="@+id/goToBedTextView"
             android:layout_width="242dp"
             android:layout_height="64dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/what_time_do_you_wake_up"
+            android:layout_marginTop="64dp"
+            android:text="@string/what_time_do_you_go_to_bed"
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/minutesTextView1" />
+            app:layout_constraintTop_toBottomOf="@+id/wakeUpMinutesTextView" />
 
         <TextView
-            android:id="@+id/hoursTextView1"
+            android:id="@+id/wakeUpHoursTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:text="@string/hours"
             android:textAlignment="textStart"
             android:textSize="20sp"
@@ -51,10 +53,10 @@
             app:layout_constraintTop_toBottomOf="@+id/wakeUpTextView" />
 
         <TextView
-            android:id="@+id/hoursTextView2"
+            android:id="@+id/goBedHoursTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:text="@string/hours"
             android:textAlignment="textStart"
             android:textSize="20sp"
@@ -64,40 +66,92 @@
             app:layout_constraintTop_toBottomOf="@+id/goToBedTextView" />
 
         <TextView
-            android:id="@+id/minutesTextView1"
+            android:id="@+id/wakeUpMinutesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="32dp"
             android:text="@string/minutes"
             android:textAlignment="textStart"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.247"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wakeUpTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/wakeUpHoursTextView" />
 
         <TextView
-            android:id="@+id/minutesTextView2"
+            android:id="@+id/goBedMinutesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="32dp"
             android:text="@string/minutes"
             android:textAlignment="textStart"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.247"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hoursTextView2" />
+            app:layout_constraintTop_toBottomOf="@+id/goBedHoursTextView" />
 
         <Button
             android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/minutesTextView2" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/wakeUpHoursSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minHeight="48dp"
+            android:selectedItemPosition="@={sleepingPatternViewModel.selectedWakeUpHours}"
+            app:layout_constraintBottom_toBottomOf="@+id/wakeUpHoursTextView"
+            app:layout_constraintEnd_toEndOf="@+id/wakeUpTextView"
+            app:layout_constraintStart_toEndOf="@+id/wakeUpHoursTextView"
+            app:layout_constraintTop_toTopOf="@+id/wakeUpHoursTextView"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/wakeUpMinutesSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minHeight="48dp"
+            android:selectedItemPosition="@={sleepingPatternViewModel.selectedWakeUpMinutes}"
+            app:layout_constraintBottom_toBottomOf="@+id/wakeUpMinutesTextView"
+            app:layout_constraintEnd_toEndOf="@+id/wakeUpTextView"
+            app:layout_constraintStart_toEndOf="@+id/wakeUpMinutesTextView"
+            app:layout_constraintTop_toTopOf="@+id/wakeUpMinutesTextView"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/goBedHoursSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minHeight="48dp"
+            android:selectedItemPosition="@={sleepingPatternViewModel.selectedGoBedHours}"
+            app:layout_constraintBottom_toBottomOf="@+id/goBedHoursTextView"
+            app:layout_constraintEnd_toEndOf="@+id/goToBedTextView"
+            app:layout_constraintStart_toEndOf="@+id/goBedHoursTextView"
+            app:layout_constraintTop_toTopOf="@+id/goBedHoursTextView"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/goBedMinutesSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minHeight="48dp"
+            android:selectedItemPosition="@={sleepingPatternViewModel.selectedGoBedMinutes}"
+            app:layout_constraintBottom_toBottomOf="@+id/goBedMinutesTextView"
+            app:layout_constraintEnd_toEndOf="@+id/goToBedTextView"
+            app:layout_constraintStart_toEndOf="@+id/goBedMinutesTextView"
+            app:layout_constraintTop_toTopOf="@+id/goBedMinutesTextView"
+            tools:ignore="SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
